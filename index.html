@@ -9,5 +9,52 @@
 </head>
 <body>
   <h1>Test</h1>
+  <button id="open-dialog">Öppna dialog</button>
+  <dialog id="dialog">
+    <form method="dialog">
+      <div class="main-values">
+        <label>Namn: <input type="text" required></label>
+        <label>Värde 1: <input type="number" min="1" step="1" required></label>
+        <label>Värde 2: <input type="number" min="0" max="100" step="0.1" required></label>
+      </div>
+      
+
+      <label for="has-parts">Flera delar</label>
+      <input id="has-parts" type="checkbox">
+
+      <table id="parts" class="hide">
+        <thead>
+          <tr>
+            <th>Namn</th>
+            <th>Värde 1</th>
+            <th>Värde 2</th>
+            <th>Ta bort / Lägg till</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template id="part-template">
+            <tr class="part">
+              <td><input class="name" type="text"></td>
+              <td><input class="value-1" type="number" min="1" step="1"></td>
+              <td><input class="value-2" type="number" min="0" max="100" step="0.1"></td>
+              <td><button class="remove-button" type="button">Ta bort</button></td>
+            </tr>
+          </template>
+        </tbody>
+        <tfoot>
+          <tr class="new-part">
+            <td><input class="name" type="text"></td>
+            <td><input class="value-1" type="number" min="1" step="1"></td>
+            <td><input class="value-2" type="number" min="0" max="100" step="0.1"></td>
+            <td><button class="add-button" type="button">Lägg till</button></td>
+          </tr>
+        </tfoot>
+      </table>
+
+
+      <button id="dialog-cancel" type="submit" value="cancel">Avbryt</button>
+      <button id="dialog-confirm" type="submit" value="confirm">Lägg till</button>
+    </form>
+  </dialog>
 </body>
 </html>

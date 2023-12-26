@@ -5,4 +5,26 @@
 
 :root {
   color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vmin;
+}
+
+dialog {
+  margin: auto;
+  font-size: 2rem;
+}
+
+#parts.hide {
+  display: none;
+}
+
+input:not(:focus) {
+  appearance: textfield;
+  background: none;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
 }
